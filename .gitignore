@@ -1,0 +1,9 @@
+*.o
+*.pyc
+*.pyo
+*.bak
+
+# OSX 
+.DS_Store
+.AppleDouble
+.LSOverride
