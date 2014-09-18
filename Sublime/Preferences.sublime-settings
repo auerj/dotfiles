@@ -1,0 +1,14 @@
+{
+  "color_scheme": "Packages/Solarized Color Scheme/Solarized (light).tmTheme",
+  "ignored_packages":
+  [
+    "Vintage"
+  ],
+  "indent_to_bracket": true,
+  "tab_size": 2,
+  "rulers": [80, 120],
+  "translate_tabs_to_spaces": true,
+  "trailing_spaces_modified_lines_only": true,
+  "trailing_spaces_trim_on_save": true
+}
+
