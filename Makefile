@@ -8,6 +8,12 @@ install-git:
 	ln -s `pwd`/git/gitconfig ~/.gitconfig
 
 install-zsh:
+ifeq ($(UNAME_S),Darwin)
+else
+	sudo apt-get install zsh
+	chsh -s `which zsh`
+endif
+	wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
 	rm -f ~/.zshrc
 	ln -s `pwd`/zsh/zshrc ~/.zshrc
 
