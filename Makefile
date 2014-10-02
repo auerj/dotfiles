@@ -26,6 +26,7 @@ endif
 
 install-sublime:
 ifeq ($(UNAME_S),Darwin)
+	brew cask install sublime-text
 	rm -f ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/Preferences.sublime-settings
 	ln -s `pwd`/Sublime/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/Preferences.sublime-settings
 else
