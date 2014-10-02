@@ -28,4 +28,6 @@ ifeq ($(UNAME_S),Darwin)
 	brew install vim
 	brew install macvim --override-system-vim
 	brew link macvim
+else
+	sudoa apt-get install vim
 endif
