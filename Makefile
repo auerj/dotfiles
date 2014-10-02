@@ -11,6 +11,11 @@ ifeq ($(UNAME_S),Darwin)
 endif
 
 install-git:
+ifeq ($(UNAME_S),Darwin)
+	brew install git
+else
+	sudo apt-get install git
+endif
 	rm -f ~/.gitconfig
 	ln -s `pwd`/git/gitconfig ~/.gitconfig
 
