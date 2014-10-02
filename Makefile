@@ -1,7 +1,7 @@
 # Detect OS
 UNAME_S := $(shell uname -s)
 
-install: install-paketmanager install-git install-zsh install-sublime install-vim
+install: install-paketmanager install-git install-zsh install-sublime install-vim install-utils
 
 install-paketmanager:
 ifeq ($(UNAME_S),Darwin)
@@ -43,3 +43,20 @@ else
 	sudo apt-get install vim
 endif
 
+install-utils:
+ifeq ($(UNAME_S),Darwin)
+	brew cask install dropbox
+	brew cask install vlc
+	brew cask install skype
+	brew cask install the-unarchiver
+	brew cask install firefox
+	brew cask install google-chrome
+else
+	sudo apt-get install nautilus-dropbox
+	sudo apt-get install vlc
+	sudo apt-get install skype
+	wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+	sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+	sudo apt-get update
+	sudo apt-get install google-chrome-stable
+endif
