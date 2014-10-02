@@ -33,5 +33,5 @@ ifeq ($(UNAME_S),Darwin)
 	brew install macvim --override-system-vim
 	brew link macvim
 else
-	sudoa apt-get install vim
+	sudo apt-get install vim
 endif
