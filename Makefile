@@ -1,7 +1,14 @@
 # Detect OS
 UNAME_S := $(shell uname -s)
 
-install: install-git install-zsh install-sublime
+install: install-paketmanager install-git install-zsh install-sublime install-vim
+
+install-paketmanager:
+ifeq ($(UNAME_S),Darwin)
+	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	brew update
+	brew install caskroom/cask/brew-cask
+endif
 
 install-git:
 	rm -f ~/.gitconfig
@@ -35,3 +42,4 @@ ifeq ($(UNAME_S),Darwin)
 else
 	sudo apt-get install vim
 endif
+
