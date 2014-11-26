@@ -79,3 +79,5 @@ export LANG=de_AT.UTF-8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export WORKON_HOME=$HOME/.virtualenvs
+alias fuck='sudo $(fc -ln -1)'
