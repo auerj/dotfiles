@@ -1,6 +1,6 @@
 [user]
-	name = Robert Schilling
-	email = rschilling@student.tugraz.at
+	name = Jakob Auer
+	email = jakob.auer@student.tugraz.at
 [core]
 	excludesfile = ~/.gitignore
 	autocrlf = input
